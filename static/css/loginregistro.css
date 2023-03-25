@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 55%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+html, body{
+    width: 100%;
+}
+
+:root{
+    --fonte: 'Noto Sans Lepcha', sans-serif;
+    --cor-principal: #000796;
+    --cor-secundaria: #000ad1;
+    --cor-laranja: #f7ae15;
+    --cor-red: #ff2e43;
+    --cor-verde: #15ff4c;
+    --cor-preto: black;
+    --cor-branco: #fff
+}
+
+.error, .success{
+    width: 100%;
+    color: var(--cor-branco);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.error{
+    background: var(--cor-red);
+}
+
+.success{
+    background: var(--cor-verde);
+}
+
+/* Container - Início */
+
+.container{
+    width: 100%;
+    background: url('../images/fundo.png') fixed;
+    background-size: cover;
+}
+
+.container>div{
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--fonte);
+}
+
+.loginregistro{
+    width: 60rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.6);
+    background: rgba(0, 7, 150, 0.5);
+    padding: 2rem;
+    border: 0.4rem solid var(--cor-laranja);
+    border-radius: 1rem;
+    font-family: var(--fonte);
+}
+
+.loginregistro img{
+    width: 10rem;
+}
+
+.loginregistro form{
+    width: 100%;
+}
+
+.loginregistro div{
+    width: 100%;
+    position: relative;
+}
+
+.loginregistro div i{
+    position: absolute;
+    top: 2.2rem;
+    left: 1.5rem;
+    color: var(--cor-laranja);
+    font-size: 3rem;
+    transition: .3s;
+}
+
+.loginregistro div input{
+    width: 100%;
+    border-radius: 3rem;
+    background: transparent;
+    padding: 2rem 2rem 2rem 5rem;
+    font-size: 2rem;
+    border: 0.4rem solid var(--cor-laranja);
+    color: var(--cor-laranja);
+    font-family: var(--fonte);
+    transition: .3s;
+}
+
+.loginregistro div input:focus{
+    transform: scale(1.02);
+}
+
+.loginregistro div input:focus ~ i{
+    left: 1rem;
+}
+
+.loginregistro div input::placeholder{
+    font-size: 2rem;
+    color: var(--cor-laranja);
+    font-family: var(--fonte);
+}
+
+.loginregistro form{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.loginregistro form>a{
+    color: var(--cor-branco);
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.loginregistro form>a:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.loginregistro form>input{
+    width: 100%;
+    background: var(--cor-laranja);
+    color: var(--cor-branco);
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: var(--fonte);
+    text-align: center;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    font-weight: bold;
+}
+
+.loginregistro form>input:hover{
+    transform: scale(1.03);
+}
+
+/* Container - Fim */
+
+@media(max-width: 620px){
+    html{
+        font-size: 45%;
+    }
+
+    .loginregistro{
+        width: 35rem;
+    }
+}

@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block estilos %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block titulo %}
+    Hack de Minas
+{% endblock %}
+
+{% block cabecalho %}
+    <header class="cabecalho">
+        <div>
+            <h1>
+                {{user}}
+            </h1>
+            <a href="{% url 'logout' %}">
+                <h2>
+                    Sair
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </h2>
+                <span></span>
+            </a>
+        </div>
+    </header>
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+        <div>
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="">
+            </div>
+            <h2> Selecionar 2 minas </h2>
+            <div class="quadrados">
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+                <div class="quadrado">
+                    <span></span>
+                </div>
+            </div>
+            <a href="https://go.aff.estrelabetpartners.com/cbsk4j5j">
+                <i class="fa-solid fa-link"></i>
+                Acessar Plataforma
+            </a>
+            <a href="#" class="contador">
+                Iniciar Operação
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/mine.js' %}"></script>
+{% endblock %}

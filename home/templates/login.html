@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block estilos %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loginregistro.css' %}">
+{% endblock %}
+
+{% block titulo %}
+    Login - Hack de Minas
+{% endblock %}  
+
+    
+{% block container %}
+    <div class="container">
+        <div>
+            <div class="loginregistro">
+                <img src="{% static 'images/logo.png' %}" alt="">
+                <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    {% include 'parciais/_messages.html' %}
+                    <div>
+                        <input type="email" name="email" placeholder="E-mail"
+                        value="{{request.POST.email}}">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div>
+                        <input type="password" name="senha" placeholder="Senha">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <!-- <a href="#"> Esqueceu a senha? Clique aqui </a> -->
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

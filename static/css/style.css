@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 55%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+html, body{
+    width: 100%;
+}
+
+:root{
+    --fonte: 'Noto Sans Lepcha', sans-serif;
+    --cor-principal: #000ac0;
+    --cor-secundaria: #5961f7;
+    --cor-laranja: #f7ae15;
+    --cor-preto: black;
+    --cor-branco: #fff
+}
+
+/* Cabecalho - Início */
+
+.cabecalho{
+    width: 100%;
+    background: var(--cor-principal);
+}
+
+.cabecalho>div{
+    width: 90%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fonte);
+}
+
+.cabecalho h1, .cabecalho a{
+    color: var(--cor-branco);
+}
+
+.cabecalho h2{
+    font-size: 2.5rem;
+}
+
+.cabecalho a{
+    transition: .2s;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0rem;
+}
+
+.cabecalho a span{
+   height: 0.3rem;
+   border-radius: 1rem;
+   width: 0%;
+   background: var(--cor-branco);
+   transition: .4s;
+}
+
+.cabecalho a:hover{
+    transform: scale(1.1);
+}
+
+.cabecalho a:hover span{
+    width: 100%;
+}
+
+/* Cabecalho - Fim */
+
+/* Container - Início */
+
+.container{
+    width: 100%;
+    background: url('../images/fundo.png') fixed;
+    background-size: cover;
+
+}
+
+.container>div{
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    /* border: 1px solid yellow; */
+    font-family: var(--fonte);
+}
+
+.container>div h2{
+    font-size: 3rem;
+    color: var(--cor-branco);
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.container>div h2.mostrar{
+    display: block;
+}
+
+.logo img{
+    width: 10rem;
+    /* border: 1px solid red; */
+}
+
+.container>div a:nth-of-type(2){
+    background: var(--cor-laranja);
+    color: var(--cor-branco);
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    width: 30rem;
+    font-weight: bold;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.container>div a:nth-of-type(1){
+    color: var(--cor-branco);
+    font-size: 2.5rem;
+    transition: .3s;
+    display: none;
+}
+
+.container>div a.mostrar:nth-of-type(1){
+    display: block;
+}
+
+.container>div a:hover:nth-of-type(1){
+    transform: scale(1.05);   
+    background: transparent;
+}
+
+.container a:hover:nth-of-type(2){
+    transform: scale(1.05);
+    background: rgb(163, 107, 1);
+}
+
+.quadrados{
+    display: flex;
+    width: 60rem;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* border: 1px solid black; */
+}
+
+.quadrado{
+    border-radius: 1rem;
+    background: var(--cor-principal);
+    width: 8.5rem;
+    height: 8.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.quadrado img{
+    width: 5rem;
+}
+
+.star{
+    background: var(--cor-laranja);
+}
+
+.quadrado span{
+    display: block;
+    border-radius: 50%;
+    background: var(--cor-secundaria);
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* Container - Fim */
+
+@media (max-width: 600px){
+    html{
+        font-size: 45%;
+    }
+
+    .quadrados{
+        width: 40rem;
+    }
+
+    .quadrado{
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .quadrado span{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 340px){
+    html{
+        font-size: 35%;
+    }
+}
